@@ -1,20 +1,14 @@
 import React from "react";
 import Jokes from "./Jokes"
+import jokesData from "./jokesData"
 
 function App(){
+  
+  const jokeComp = jokesData.map(joke => <Jokes key={joke.id} question={joke.question} jokeLine={joke.jokeLine} />)
+
   return(
     <div>
-      <Jokes 
-        question = "What is a pen"
-        joke = "Don't know, try askink"
-      />
-      <Jokes 
-        question = "What is a pencil"
-        joke = "Don't know, try asking pen"
-      />
-      <Jokes 
-        joke = "Don't know, try askink"
-      />
+      {jokeComp}
     </div>
   )
 }
