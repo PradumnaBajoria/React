@@ -1,19 +1,20 @@
 import React from "react";
-import Contact from "./Contact"
-import img from "./images/img2.png"
+import Jokes from "./Jokes"
 
 function App(){
   return(
     <div>
-      <Contact
-        contact={{name: "Mr. 1", img: img, phone: "9874563256", email: "mr1@gmail.com"}}
+      <Jokes 
+        question = "What is a pen"
+        joke = "Don't know, try askink"
       />
-      <Contact
-        contact={{name: "Mr. 1", img: img, phone: "9874563256", email: "mr1@gmail.com"}}
+      <Jokes 
+        question = "What is a pencil"
+        joke = "Don't know, try asking pen"
       />
-      <Contact
-        contact={{name: "Mr. 1", img: img, phone: "9874563256", email: "mr1@gmail.com"}}
-    />
+      <Jokes 
+        joke = "Don't know, try askink"
+      />
     </div>
   )
 }
