@@ -5,41 +5,35 @@ import ReactDOM from 'react-dom';
 //ReactDOM.render(<App />, document.getElementById('root'));
 
 class App extends React.Component{
-    render(){
-        return(
-            <div>
-                <Header username="Pradumna"/>
-                <Greeting />
-            </div>
-        )
-    }
-}
 
-class Header extends React.Component{
-    render(){
-        return(
-            <header>
-                <p>Welcome, {this.props.username}!</p>
-            </header>
-        )
+    constructor(){
+        super()
+        this.state = {
+            answer: "Yes",
+            name: "Prdaumna",
+            age: 20,
+            isLoggedIn: false
+        }
     }
-}
-
-class Greeting extends React.Component{
     render(){
-        const date = new Date()
-        const hours = date.getHours()
-        let timeOfDay
-        if(hours<12){
-            timeOfDay = "Morning"
-        }else if(hours>12 && hours<17){
-            timeOfDay = "Afternoon"
+
+        let word
+        if(this.state.isLoggedIn){
+            word = "in"
         }else{
-            timeOfDay = "Night"
+            word = "out"
         }
 
         return(
-            <p>Good {timeOfDay} to you, Sir or Madam</p>
+            <div>
+                <h1>{this.state.name}</h1>
+                <h3>{this.state.age} years old</h3>
+                <p>Are you learning State?</p>
+                {this.state.answer}
+                <p>You are logged {word}</p>
+                
+
+            </div>
         )
     }
 }
