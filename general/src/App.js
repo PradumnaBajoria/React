@@ -6,22 +6,13 @@ function App(){
   return(
     <div>
       <Contact
-        name="contact1"
-        email="con1@gmail.com"
-        img = {img}
-        phone = "9632587415"
+        contact={{name: "Mr. 1", img: img, phone: "9874563256", email: "mr1@gmail.com"}}
       />
       <Contact
-        name="contact2"
-        email="con2@gmail.com"
-        img = {img}
-        phone = "9432587415"
+        contact={{name: "Mr. 1", img: img, phone: "9874563256", email: "mr1@gmail.com"}}
       />
       <Contact
-      name="contact3"
-      email="con3@gmail.com"
-      img = {img}
-      phone = "9633487415"
+        contact={{name: "Mr. 1", img: img, phone: "9874563256", email: "mr1@gmail.com"}}
     />
     </div>
   )
