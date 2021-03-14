@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-//import App from './App';
+import App from './App';
 
-//ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById('root'));
 
-class App extends React.Component{
+/*class App extends React.Component{
 
     constructor(){
         super()
@@ -38,4 +38,4 @@ class App extends React.Component{
     }
 }
 
-ReactDOM.render(<App />, document.getElementById("root"))
+ReactDOM.render(<App />, document.getElementById("root"))*/
