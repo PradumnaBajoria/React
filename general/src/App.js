@@ -1,42 +1,45 @@
-import React from "react";
+import React, {Component} from "react"
 
-class App extends React.Component{
-
+class App extends Component{
   constructor(){
     super()
-    this.state = {
-      count: 0
+    this.state = {}
+  }
+
+  static getDerivedStateFromProps(props, state){
+    // return new updated state based upon props
+  }
+
+  getSnapshotBeforeUpdate(){
+    //create a backup of a current way things are
+  }
+
+  componentDidMount(){
+
+  }
+
+  /*componentWillReceiveProps(nextProps){
+    if(nextProps.whatever !== this.props.whatever){
+      //do something important here
     }
-    this.plusOnClick = this.plusOnClick.bind(this)
-    this.minusOnClick = this.minusOnClick.bind(this)
+  }*/
+
+  shouldComponentUpdate(nextProps, nextState){
+    //return true if want to update
+    //return false if not
   }
 
-  plusOnClick(){
-    //this.setState({count: 1})
-    this.setState((prevState) => {
-      return{
-        count: prevState.count + 1
-      }
-    })
-  }
-
-  minusOnClick(){
-    //this.setState({count: 1})
-    this.setState((prevState) => {
-      return{
-        count: prevState.count - 1
-      }
-    })
+  componentWillUnmount(){
+    //teardown or cleanup your code before your component disappears
+    //(Eg.)remove event listener
   }
 
   render(){
     return(
       <div>
-        <h1>{this.state.count}</h1>
-        <button onClick={this.plusOnClick}>Click Me to plus</button>
-        <button onClick={this.minusOnClick}>Click Me to minus</button>
+        Hello World
       </div>
-    )
+    )   
   }
 }
 
