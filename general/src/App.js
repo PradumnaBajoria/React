@@ -1,38 +1,40 @@
 import React from "react";
-//import Jokes from "./Jokes"
-//import jokesData from "./jokesData"
-
-import img2 from "./images/img2.png"
-
-/*function App(){
-  
-  const jokeComp = jokesData.map(joke => <Jokes key={joke.id} question={joke.question} jokeLine={joke.jokeLine} />)
-
-  return(
-    <div>
-      {jokeComp}
-    </div>
-  )
-}*/
-
 
 class App extends React.Component{
 
-  click(){
-    return(
-      //console.log("I was Clicked")
-      <p>I was clicked</p>
-    )
+  constructor(){
+    super()
+    this.state = {
+      count: 0
+    }
+    this.plusOnClick = this.plusOnClick.bind(this)
+    this.minusOnClick = this.minusOnClick.bind(this)
+  }
+
+  plusOnClick(){
+    //this.setState({count: 1})
+    this.setState((prevState) => {
+      return{
+        count: prevState.count + 1
+      }
+    })
+  }
+
+  minusOnClick(){
+    //this.setState({count: 1})
+    this.setState((prevState) => {
+      return{
+        count: prevState.count - 1
+      }
+    })
   }
 
   render(){
-    const img = img2
     return(
       <div>
-        <img onMouseOver={() => console.log("Hovered!")} src={img} />
-        <br />
-        <br />
-        <button onClick={this.click}>Click Me</button>
+        <h1>{this.state.count}</h1>
+        <button onClick={this.plusOnClick}>Click Me to plus</button>
+        <button onClick={this.minusOnClick}>Click Me to minus</button>
       </div>
     )
   }
